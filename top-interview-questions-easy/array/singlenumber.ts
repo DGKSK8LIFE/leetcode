@@ -4,5 +4,5 @@ function singleNumber(nums: number[]): number {
   for (let i of nums) {
     a ^= i;
   }
-  return a
+  return a;
 };
