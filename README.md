@@ -2,4 +2,6 @@
 
 Leetcode solutions in Typescript
 
-## Collections 
+## Collections
+
+[Top Interview Questions (Easy)](/top-interview-questions-easy)
