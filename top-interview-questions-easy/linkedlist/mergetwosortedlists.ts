@@ -1,13 +1,4 @@
 // Merge Two Sorted Lists
-class ListNode {
-  val: number
-  next: ListNode | null
-  constructor(val?: number, next?: ListNode | null) {
-    this.val = (val === undefined ? 0 : val)
-    this.next = (next === undefined ? null : next)
-  }
-}
-
 function mergeTwoLists(l1: ListNode | null, l2: ListNode | null): ListNode | null {
   let mergedHead: object = { val: -1, next: null },
     crt: object = mergedHead;
