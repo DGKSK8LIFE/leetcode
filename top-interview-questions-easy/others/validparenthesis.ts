@@ -1,6 +1,6 @@
 // Valid Parenthesis
 function isValid(s: string): boolean {
-  const stack = [];
+  const stack: any[] = [];
 
   for (let i: number = 0; i < s.length; i++) {
     let c: string = s.charAt(i);
