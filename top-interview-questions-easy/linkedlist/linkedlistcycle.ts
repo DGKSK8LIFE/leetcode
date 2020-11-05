@@ -1,7 +1,7 @@
 // Linked List Cycle
-function hasCycle(head: ListNode | null): boolean {
-  let p1: ListNode = head;
-  let p2: ListNode = head;
+function hasCycle(head: any | null): boolean {
+  let p1: any = head;
+  let p2: any = head;
 
   while (p2 && p2.next && p2.next.next) {
     p1 = p1.next;
