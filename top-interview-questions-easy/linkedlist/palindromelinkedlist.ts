@@ -1,12 +1,12 @@
 // Palindrome Linked List
-function isPalindrome(head: ListNode | null): boolean {
-  let curr: ListNode = head;
-  const traverse = node => {
+function isPalindrome(head: any | null): boolean {
+  let curr: any = head;
+  const traverse = (node: any) => {
     if (node === null) {
       return true;
     }
-    const prevIsSame = traverse(node.next);
-    const currIsSame = curr.val === node.val;
+    const prevIsSame: any = traverse(node.next);
+    const currIsSame: boolean = curr.val === node.val;
     curr = curr.next;
     return prevIsSame && currIsSame;
   }
