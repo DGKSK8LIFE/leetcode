@@ -1,21 +1,14 @@
 // Shuffle an Array
-class Solution {
-  constructor(nums: number[]) {
+const Solution = function (nums: number[]) {
+  this.nums = nums;
+  this.original = nums.slice();
+};
 
-  }
+Solution.prototype.reset = function (): number[] {
+  return this.original;
+};
 
-  reset(): number[] {
-
-  }
-
-  shuffle(): number[] {
-
-  }
-}
-
-/**
- * Your Solution object will be instantiated and called as such:
- * var obj = new Solution(nums)
- * var param_1 = obj.reset()
- * var param_2 = obj.shuffle()
- */
+Solution.prototype.shuffle = function (): number[] {
+  this.nums.sort((a, b) => { if (Math.random() > 0.5) return 1; else return -1; });
+  return this.nums;
+};
