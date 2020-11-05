@@ -1,6 +1,6 @@
 // Reverse Linked List
-function reverseList(head: ListNode | null): ListNode | null {
-  let [prev, current]: ListNode[] = [null, head];
+function reverseList(head: any | null): any | null {
+  let [prev, current]: any[] = [null, head];
   while (current) {
     [current.next, prev, current] = [prev, current, current.next];
   }
