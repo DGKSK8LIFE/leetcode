@@ -1,7 +1,7 @@
 // Merge Two Sorted Lists
-function mergeTwoLists(l1: ListNode | null, l2: ListNode | null): ListNode | null {
-  let mergedHead: object = { val: -1, next: null },
-    crt: object = mergedHead;
+function mergeTwoLists(l1: any | null, l2: any | null): any | null {
+  let mergedHead: any = { val: -1, next: null },
+    crt: any = mergedHead;
   while (l1 && l2) {
     if (l1.val > l2.val) {
       crt.next = l2;
