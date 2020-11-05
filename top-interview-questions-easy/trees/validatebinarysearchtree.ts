@@ -1,7 +1,5 @@
 // Validate Binary Search Tree
-function isValidBST(root: TreeNode | null): boolean {
+function isValidBST(root: any | null, min = -Infinity, max = Infinity): boolean {
   if (!root) return true;
-  if (min && root.val <= min.val) return false;
-  if (max && root.val >= max.val) return false;
-  return isValidBST(root.left, min, root) && isValidBST(root.right, root, max);
+  return !(root.val <= min || root.val >= max) && isValidBST(root.left, min, root.val) && isValidBST(root.right, root.val, max);
 };
