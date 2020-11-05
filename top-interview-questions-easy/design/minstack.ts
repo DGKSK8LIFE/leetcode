@@ -1,31 +1,23 @@
 // Min Stack
-class MinStack {
-  constructor() {
+const MinStack = function (): void {
+  this.elements = [];
+};
 
-  }
+MinStack.prototype.push = function (x: number): void {
+  this.elements.push({
+    value: x,
+    min: this.elements.length === 0 ? x : Math.min(x, this.getMin()),
+  });
+};
 
-  push(x: number): void {
+MinStack.prototype.pop = function (): void {
+  this.elements.pop();
+};
 
-  }
+MinStack.prototype.top = function (): number {
+  return this.elements[this.elements.length - 1].value;
+};
 
-  pop(): void {
-
-  }
-
-  top(): number {
-
-  }
-
-  getMin(): number {
-
-  }
-}
-
-/**
- * Your MinStack object will be instantiated and called as such:
- * var obj = new MinStack()
- * obj.push(x)
- * obj.pop()
- * var param_3 = obj.top()
- * var param_4 = obj.getMin()
- */
+MinStack.prototype.getMin = function (): number {
+  return this.elements[this.elements.length - 1].min;
+};
