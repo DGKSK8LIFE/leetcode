@@ -1,6 +1,6 @@
 // Remove Nth Node From End of List
-function removeNthFromEnd(head: ListNode | null, n: number): ListNode | null {
-  let hare: ListNode = head, curr: ListNode = head;
+function removeNthFromEnd(head: any | null, n: number): any | null {
+  let hare: any = head, curr: any = head;
   while (n--) {
     hare = hare.next;
   }
